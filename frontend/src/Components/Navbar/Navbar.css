@@ -11,6 +11,14 @@
     gap: 10px;
   
 }
+.nav-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: white;
+    padding: 4px;
+}
 .nav-logo p{
     
     color: #171717;
