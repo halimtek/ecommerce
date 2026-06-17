@@ -218,13 +218,12 @@ app.get('/newcollections', async(req, res)=>{
     res.send(newcollection)
 })
 
-//Creating endpoint for popular in women
+//Creating endpoint for popular products (shown on the homepage)
 
-app.get('/popularinwomen', async(req, res)=>{
-    let products = await Product.find({category:'women'});
-    let popular_in_women = products.slice(0.4);
-    // console.log('popular in women fetched');
-    res.send(popular_in_women);
+app.get('/popularinethiopia', async(req, res)=>{
+    let products = await Product.find({});
+    let popular = products.slice(0, 8);
+    res.send(popular);
 });
 
 //Creating middleware to fetch user

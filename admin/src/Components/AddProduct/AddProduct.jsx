@@ -8,7 +8,7 @@ const AddProduct = () => {
   const [productDetails, setProductDetails] = useState({
     name: "",
     image: "",
-    category: "women",
+    category: "laptops",
     new_price: "",
     old_price: "",
   });
@@ -99,9 +99,11 @@ const AddProduct = () => {
             name="category"
             className="add-product-selector"
           >
-            <option value="Women">Women</option>
-            <option value="Men">Men</option>
-            <option value="Kid">Kid</option>
+            <option value="laptops">Laptops</option>
+            <option value="desktops">Desktops</option>
+            <option value="accessories">Accessories</option>
+            <option value="monitors">Monitors</option>
+            <option value="tablets">Tablets</option>
           </select>
         </div>
         <div className="addproduct-itemfield">

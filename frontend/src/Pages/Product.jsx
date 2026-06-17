@@ -12,13 +12,21 @@ export const Product = () => {
     const {productId} = useParams();
     const product = all_product.find((e) => e.id === Number(productId));
 
+    if (!product) {
+      return (
+        <div style={{ padding: '100px 20px', textAlign: 'center' }}>
+          {all_product.length === 0 ? 'Loading product...' : 'Product not found.'}
+        </div>
+      );
+    }
+
   return (
     <div className=''>
 
         <Breadcrum  product = {product}/>
         <ProductDisplay product = {product} />
         <DescriptionBox />
-        <RelatedProducts />
+        <RelatedProducts category={product?.category} currentId={product?.id} />
 
     </div>
   )

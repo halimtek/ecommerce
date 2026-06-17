@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.css'
+import { Link } from 'react-router-dom'
 import hand_icon from '../Assets/hand_icon.png'
 import arrow_icon from '../Assets/arrow.png'
 import hero_image from '../Assets/computer.png'
@@ -11,7 +12,7 @@ const Hero = () => {
       {/* LEFT SIDE */}
       <div className="hero-left">
 
-        <h2>NEW ARRIVALS ONLY</h2>
+        <h2>NEW TECH ARRIVALS</h2>
 
         <div className="hero-main-text">
 
@@ -20,16 +21,18 @@ const Hero = () => {
             <img src={hand_icon} alt="hand icon" />
           </div>
 
-          <p>Collections</p>
-          <p>For Everyone</p>
+          <p>Laptops, Desktops</p>
+          <p>& Everything Tech</p>
 
         </div>
 
         {/* CTA BUTTON */}
-        <div className="hero-latest-btn">
-          <span>Latest Collection</span>
-          <img src={arrow_icon} alt="arrow icon" />
-        </div>
+        <Link to='/laptops' style={{ textDecoration: 'none' }}>
+          <div className="hero-latest-btn">
+            <span>Shop Laptops</span>
+            <img src={arrow_icon} alt="arrow icon" />
+          </div>
+        </Link>
 
       </div>
 

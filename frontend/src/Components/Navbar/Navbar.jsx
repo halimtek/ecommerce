@@ -8,7 +8,7 @@ import nav_dropdown from '../Assets/nav_dropdown.png'
 
 export const Navbar = () => {
 
-  const [menu, setMenu] = useState('shop');
+  const [menu, setMenu] = useState('home');
   const { getTotalCartItems } = useContext(ShopContext);
   const menuRef = useRef();
 
@@ -36,9 +36,9 @@ export const Navbar = () => {
       {/* MENU */}
       <ul ref={menuRef} className="nav-menu">
 
-        <li onClick={() => setMenu('shop')}>
+        <li onClick={() => setMenu('home')}>
           <Link style={{ textDecoration: 'none' }} to="/">Home</Link>
-          {menu === "shop" ? <hr /> : null}
+          {menu === "home" ? <hr /> : null}
         </li>
 
         <li onClick={() => setMenu("laptops")}>

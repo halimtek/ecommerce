@@ -1,40 +1,88 @@
-.shopccategory-banner{
-    display: block;
-    margin: 30px;
+.shop-category {
+
+}
+
+.shopcategory-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    margin: 30px auto;
     width: 82%;
-
+    height: 280px;
+    border-radius: 20px;
+    color: white;
 }
 
-.shop-category{
-
+.shopcategory-banner h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
 }
 
-.shopcategory-indexSort{
-display: flex;
-margin: 0px 170px;
-justify-content: space-between;
-align-items: center;
+.shopcategory-banner p {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0;
+    opacity: 0.92;
 }
 
-.shopcategory-sort{
+/* One distinct gradient per navbar category, so each page feels
+   visually distinct even without dedicated banner photography. */
+.banner-laptops {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+}
+.banner-desktops {
+    background: linear-gradient(135deg, #373b44, #4286f4);
+}
+.banner-accessories {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+.banner-monitors {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+.banner-tablets {
+    background: linear-gradient(135deg, #c31432, #240b36);
+}
+
+.shopcategory-indexSort {
+    display: flex;
+    margin: 0px 170px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopcategory-sort {
     padding: 10px;
     border-radius: 40px;
     border: 1px solid #888;
-
-    
+    cursor: pointer;
+    user-select: none;
 }
-.shopcategory-indexSort p span{
+
+.shopcategory-indexSort p span {
     font-weight: 600;
 }
-.shopcategory-products{
-   
+
+.shopcategory-products {
     margin: 20px 170px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 80px;
-
 }
-.shopcategory-loadmore{
+
+.shopcategory-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #787878;
+    font-size: 18px;
+    padding: 60px 0;
+}
+
+.shopcategory-loadmore {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,66 +94,78 @@ align-items: center;
     color: #787878;
     font-size: 18px;
     font-weight: 500;
-
 }
-@media(max-width:1280px){
-    .shopccategory-banner{
+
+@media(max-width:1280px) {
+    .shopcategory-banner {
         margin: 20px auto;
         width: 90%;
+        height: 220px;
     }
-    .shopcategory-indexSort{
+    .shopcategory-banner h1 {
+        font-size: 36px;
+    }
+    .shopcategory-banner p {
+        font-size: 15px;
+    }
+    .shopcategory-indexSort {
         width: 90%;
         margin: auto;
     }
-    .shopcategory-sort{
+    .shopcategory-sort {
         padding: 5px 10px;
         font-size: 12px;
     }
-    .shopcategory-indexSort p{
+    .shopcategory-indexSort p {
         font-size: 12px;
     }
-    .shopcategory-products{
+    .shopcategory-products {
         width: 90%;
         margin: 10px auto;
         row-gap: 40px;
-
-
-     
-
     }
-    .shopcategory-products .item{
+    .shopcategory-products .item {
         margin: auto;
     }
-    .shopcategory-loadmore{
+    .shopcategory-loadmore {
         margin: 100px auto;
         width: 200px;
         height: 60px;
         font-size: 16px;
-
     }
 }
-@media(max-width:800px){
-    .shopccategory-banner{
-       
-        width: 95%;
-    }
-   
-    .shopcategory-products{
-        width: 95%;
-       
 
+@media(max-width:800px) {
+    .shopcategory-banner {
+        width: 95%;
+        height: 180px;
     }
-    .shopcategory-loadmore{
+    .shopcategory-banner h1 {
+        font-size: 28px;
+    }
+    .shopcategory-products {
+        width: 95%;
+    }
+    .shopcategory-loadmore {
         margin: 60px;
         width: 150px;
         height: 40px;
         font-size: 13px;
     }
-
 }
-@media(max-width:500px){
-    
-    .shopcategory-products{
+
+@media(max-width:500px) {
+    .shopcategory-banner {
+        height: 150px;
+    }
+    .shopcategory-banner h1 {
+        font-size: 22px;
+    }
+    .shopcategory-banner p {
+        font-size: 13px;
+        padding: 0 20px;
+    }
+    .shopcategory-products {
         grid-template-columns: 1fr 1fr;
     }
 }

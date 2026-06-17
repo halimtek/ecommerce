@@ -39,26 +39,15 @@ const ProductDisplay = (props) => {
           </div>
           </div>
           <div className="productdisplay-right-description">
-            A lightweight, usually knitted, pullover shirt, close-fitting and
-            with a round neckline and short sleeves, worm as an undershirt or
-            outer garmment
-          </div>
-          <div className="productdisplay-right-size">
-            <h1>Select Size</h1>
-            <div className="productdisplay-right-sizes">
-              <div>S</div>
-              <div>M</div>
-              <div>L</div>
-              <div>XL</div>
-              <div>XXL</div>
-            </div>
+            {product.description ||
+              `${product.name} — quality you can rely on, backed by HalimTekShop's standard warranty and support.`}
           </div>
           <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
           <p className="productdisplay-right-category">
-            <span>Category :</span>Women, T-shirt, Crop Top{" "}
+            <span>Category :</span> {product.category}{" "}
           </p>
           <p className="productdisplay-right-category">
-            <span>Tags :</span>Modern, Latest{" "}
+            <span>Availability :</span> {product.available === false ? "Out of stock" : "In stock"}{" "}
           </p>
         
       </div>
