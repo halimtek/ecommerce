@@ -7,28 +7,39 @@ import hero_image from '../Assets/hero_image.png'
 const Hero = () => {
   return (
     <div className='hero'>
-        <div className="hero-left">
-            <h2>NEW ARRIVALS ONLY</h2>
-            <div>
-                <div className="hero-hand-icon">
-                    <p>new</p>
-                    <img src={hand_icon} alt="" />
-                </div>
-                <p>collections</p>
-                <p>for everone</p>
-            </div>
-            <div className="hero-latest-btn">
-                <div>Latest Collection</div>
-                <img src={arrow_icon} alt="" />
-            </div>
+
+      {/* LEFT SIDE */}
+      <div className="hero-left">
+
+        <h2>NEW ARRIVALS ONLY</h2>
+
+        <div className="hero-main-text">
+
+          <div className="hero-hand-icon">
+            <p>New</p>
+            <img src={hand_icon} alt="hand icon" />
+          </div>
+
+          <p>Collections</p>
+          <p>For Everyone</p>
 
         </div>
-        <div className="hero-right">
-            <img src={hero_image} alt="" />
 
+        {/* CTA BUTTON */}
+        <div className="hero-latest-btn">
+          <span>Latest Collection</span>
+          <img src={arrow_icon} alt="arrow icon" />
         </div>
-        
+
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="hero-right">
+        <img src={hero_image} alt="hero banner" />
+      </div>
+
     </div>
   )
-};
-export default Hero;
+}
+
+export default Hero
